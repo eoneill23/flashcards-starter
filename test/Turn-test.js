@@ -62,9 +62,13 @@ describe('Turn', function() {
   it('should give feedback based on the answer', function() 
     {
     const card = new Card (1, 'What is an example of an object?', ['boolean', 'string', 'array'], 'array');
-    const turn = new Turn ('Wrong answer', card);
+    const turn1 = new Turn ('Wrong answer', card);
+    const turn2 = new Turn ('array', card);
 
-    turn.evaluateGuess();
-    expect(turn.giveFeedback()).to.equal('Try again!')
+    turn1.evaluateGuess();
+    turn2.evaluateGuess();
+
+    expect(turn1.giveFeedback()).to.equal('Try again!')
+    expect(turn2.giveFeedback()).to.equal('Great job!')
   });
 });
