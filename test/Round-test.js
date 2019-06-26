@@ -32,8 +32,6 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
-    round.returnCurrentCard();
-
     expect(round.returnCurrentCard()).to.equal(card1)
   });
 
@@ -67,7 +65,7 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
-    expect(round.takeTurn('sea otter')).to.equal('Great job!')
+    expect(round.takeTurn('sea otter')).to.equal('Correct!')
   });
 
   it('should evaluate a guess that is incorrect', function() {
@@ -78,7 +76,7 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
-    expect(round.takeTurn('capybara')).to.equal('Try again!')
+    expect(round.takeTurn('capybara')).to.equal('Incorrect.')
   });
 
   it('should evaluate a guess that is incorrect', function() {

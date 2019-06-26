@@ -68,7 +68,7 @@ describe('Turn', function() {
     turn1.evaluateGuess();
     turn2.evaluateGuess();
 
-    expect(turn1.giveFeedback()).to.equal('Try again!')
-    expect(turn2.giveFeedback()).to.equal('Great job!')
+    expect(turn1.giveFeedback()).to.equal('Incorrect.')
+    expect(turn2.giveFeedback()).to.equal('Correct!')
   });
 });

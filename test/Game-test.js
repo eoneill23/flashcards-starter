@@ -14,17 +14,18 @@ describe('Game', function() {
     expect(Game).to.be.a('function');
   });
 
-  it('keep track of the current round', () => {
-    const game = new Game();
-    expect(Game).to.be.a('function');
-  });
-
   it('should keep track of the current round', () => {
     const game = new Game();
 
     game.start();
 
-    expect(game.round).to.equal(1);
+    expect(game.roundTracker).to.equal(1);
   });
 
+  it('should create a new deck with the new cards', () => {
+    const game = new Game();
+
+    game.start();
+    expect(game.deck.cardDeck.length).to.equal(30);
+  });
 });

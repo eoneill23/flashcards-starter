@@ -16,9 +16,9 @@ class Round {
     if(turn.evaluateGuess() === false) {
       this.incorrectGuesses.push(this.deck.cardDeck[this.turn].id)
     }
-    this.turn ++;
     let feedback = turn.giveFeedback();
     this.calculatePercentCorrect()
+    this.turn ++;
     return feedback;
   }
 
