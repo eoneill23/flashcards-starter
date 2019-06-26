@@ -31,7 +31,6 @@ class Round {
   }
 
   endRound(percentage){
-    console.log(percentage)
     return  `** Round over! ** You answered ${percentage}% of the questions correctly!`
   }
 }

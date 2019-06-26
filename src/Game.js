@@ -3,7 +3,14 @@ const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 
 class Game {
-  constructor() {}
+  constructor() {
+    this.round = 0;
+    this.cards = [];
+  }
+
+  start() {
+    this.round ++
+  }
 
   printMessage(deck, round) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.

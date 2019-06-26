@@ -24,14 +24,14 @@ describe('Turn', function() {
 
   it('should be able to accept the card in play', function() 
     {
-    const card = new Card(1, 'What is an example of an object?', ['boolean', 'string', 'array'], 'array')
+    const card = new Card({id: 1, question: 'What is an example of an object?', answers: ['boolean', 'string', 'array'], correctAnswer: 'array'})
     const turn = new Turn('My Guess', card)
     expect(turn.card).to.equal(card)
   });
 
   it('should return the user\'s guess', function()
     {
-    const card = new Card (1, 'What is an example of an object?', ['boolean', 'string', 'array'], 'array');
+    const card = new Card({id: 1, question: 'What is an example of an object?', answers: ['boolean', 'string', 'array'], correctAnswer: 'array'})
     const turn = new Turn ('My Guess', card);
 
     turn.returnGuess();
@@ -40,7 +40,7 @@ describe('Turn', function() {
 
   it('should return the current card', function()
     {
-    const card = new Card (1, 'What is an example of an object?', ['boolean', 'string', 'array'], 'array');
+   const card = new Card({id: 1, question: 'What is an example of an object?', answers: ['boolean', 'string', 'array'], correctAnswer: 'array'})
     const turn = new Turn ('My Guess', card);
 
     turn.returnCard();
@@ -49,7 +49,7 @@ describe('Turn', function() {
 
   it('should evaluate the user\'s guess', function()
     {
-    const card = new Card (1, 'What is an example of an object?', ['boolean', 'string', 'array'], 'array');
+   const card = new Card({id: 1, question: 'What is an example of an object?', answers: ['boolean', 'string', 'array'], correctAnswer: 'array'})
     const turn1 = new Turn ('wrong', card);
     const turn2 = new Turn ('array', card);
 
@@ -61,7 +61,7 @@ describe('Turn', function() {
 
   it('should give feedback based on the answer', function() 
     {
-    const card = new Card (1, 'What is an example of an object?', ['boolean', 'string', 'array'], 'array');
+   const card = new Card({id: 1, question: 'What is an example of an object?', answers: ['boolean', 'string', 'array'], correctAnswer: 'array'})
     const turn1 = new Turn ('Wrong answer', card);
     const turn2 = new Turn ('array', card);
 
