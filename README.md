@@ -12,4 +12,4 @@ Clone this repo, open your terminal, and run the command `node index.js`. Use yo
 
 ## Gameplay
 
-![flash cards example gif](flashcards-starter/flashcards_screen_recording_shortened.gif)
+![flash cards example gif](flashcards_screen_recording_shortened.gif)
